@@ -1,6 +1,6 @@
 package dio.web.api.model;
 
-public class Usuario {
+public class Usuario{
     private Integer id;
     private String login;
     private String password;
@@ -9,6 +9,21 @@ public class Usuario {
         this.login = login;
         this.password = password;
     }
+
+//    @Override
+//    public int length() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public char charAt(int index) {
+//        return 0;
+//    }
+//
+//    @Override
+//    public CharSequence subSequence(int start, int end) {
+//        return null;
+//    }
 
     @Override
     public String toString() {

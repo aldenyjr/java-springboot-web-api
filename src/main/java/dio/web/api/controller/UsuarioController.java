@@ -3,6 +3,7 @@ package dio.web.api.controller;
 import dio.web.api.model.Usuario;
 import dio.web.api.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class UsuarioController {
           return usuarioRepository.findByUsername(username);
     }
 
+
 //    @DeleteMapping("/Users/{id}")
     @DeleteMapping("/{id}")
     public void deleteuser(@PathVariable("id") Integer id){
@@ -36,5 +38,10 @@ public class UsuarioController {
     @PostMapping()
     public Usuario postUsers(@RequestBody Usuario usuario){
         return usuarioRepository.save(usuario);
+    }
+
+    @PutMapping()
+    public void putUser(@RequestBody Usuario usuario){
+        usuarioRepository.save(usuario);
     }
 }
